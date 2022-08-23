@@ -1,10 +1,10 @@
 import Dash
 import ./layout
-import ../styles/style
+import dash_bootstrap_components as dbc
 
 app = Dash.dash()
 
-app.config.external_stylesheets = [style.url]
+app.config.external_stylesheets = ["dbc.themes.BOOTSTRAP"]
 
 app.layout = layout.create_layout()
 
