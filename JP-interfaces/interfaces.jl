@@ -5,7 +5,8 @@ import PyCall
 Game = PyCall.pyimport("../game/gochess.Game")
 
 function init()
-    game = Game()
+    global game = Game()
+    return game.screen
 end
     
 function run()
@@ -30,4 +31,8 @@ end
 
 function restart()
     game.restart()
+end
+
+function result()
+    return game.result
 end
