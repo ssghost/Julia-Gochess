@@ -6,19 +6,8 @@ Game = PyCall.pyimport("../game/gochess.Game")
 
 function init()
     global game = Game()
-    return game.screen
-end
-    
-function run()
     game.run()
-end
-
-function eaten()
-    game.eaten()
-end
-
-function toeat()
-    game.toeat()
+    return game.screen
 end
 
 function endcheck()
