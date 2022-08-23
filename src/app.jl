@@ -1,6 +1,6 @@
 import Dash
-import layout
-import style
+import ./layout
+import ../styles/style
 
 app = Dash.dash()
 
