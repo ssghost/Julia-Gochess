@@ -1,7 +1,10 @@
 import Dash
 import layout
+import style
 
 app = Dash.dash()
+
+app.config.external_stylesheets = [style.url]
 
 app.layout = layout.create_layout()
 
