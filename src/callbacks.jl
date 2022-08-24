@@ -7,7 +7,7 @@ export callback!(
     app,
     Dash.Input('game_canvas', 'n_clicks'),
     Dash.Input('game_btn_1', 'n_clicks'),
-    Dash.input('game_btn_2', 'n_clicks'),
+    Dash.Input('game_btn_2', 'n_clicks'),
     Dash.Output('game_canvas', 'children'),
 ) do canvas, btn1, btn2
     if Dash.ctx.triggered_id == 'game_canvas' 
