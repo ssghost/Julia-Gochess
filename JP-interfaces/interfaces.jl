@@ -18,7 +18,7 @@ export function endcheck()
 end
 
 export function showturn()
-    game.showturn()
+    return game.showturn()
 end
 
 export function restart()
