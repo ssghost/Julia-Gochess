@@ -12,6 +12,27 @@ export render_canvas = Dash.html_canvas(
 end
 
 export render_showturn = Dash.html_span(
-    id = 'game_showturn',
+    id = 'game_span_1',
+    contentEditable = false
+) do
+    Jpi.showturn()
+end
 
-)
+export render_result = Dash.html_span(
+    id = 'game_span_2',
+    contentEditable = false
+) do
+    Jpi.result()
+end
+
+export render_restart = Dash.html_button(
+    id = 'game_btn_1',
+    value = 'restart'
+) 
+end
+
+export render_endcheck = Dash.html_button(
+    id = 'game_btn_2',
+    value = 'endcheck'
+) 
+end

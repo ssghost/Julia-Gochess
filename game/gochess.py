@@ -18,7 +18,7 @@ class Game:
             else:
                 self.locdict[i] = None
         self.event = pygame.event.wait()
-        self.result = None
+        self.result = 'Game Is Ongoing.'
     
     def run(self):
         while not self.stop:
@@ -98,10 +98,13 @@ class Game:
             self.result = 'Draw.'
 
     def showturn(self):
-        if self.turn%2 == 0:
-            return 'Next Is Black Turn.'
+        if self.result == 'Game is ongoing.':
+            if self.turn%2 == 0:
+                return 'Next Is Black Turn.'
+            else:
+                return 'Next Is White Turn.' 
         else:
-            return 'Next Is White Turn.' 
+            return 'Game Has Ended.'
     
     def restart(self):
         self.__init__()

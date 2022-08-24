@@ -4,27 +4,27 @@ import PyCall
 
 Game = PyCall.pyimport("../game/gochess.Game")
 
-function init()
+export function init()
     global game = Game()
     return game.screen
 end
 
-function run()
+export function run()
     game.run()
 end
 
-function endcheck()
+export function endcheck()
     game.endcheck()
 end
 
-function showturn()
+export function showturn()
     game.showturn()
 end
 
-function restart()
+export function restart()
     game.restart()
 end
 
-function result()
+export function result()
     return game.result
 end
