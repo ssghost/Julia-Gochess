@@ -12,9 +12,12 @@ export callback!(
 ) do canvas, btn1, btn2
     if Dash.ctx.triggered_id == 'game_canvas' 
         Jpi.run()
+    end
     if Dash.ctx.triggered_id == 'game_btn_1'
         Jpi.restart()
+    end
     if Dash.ctx.triggered_id == 'game_btn_2'
         Jpi.endcheck()
+    end
 end
 
